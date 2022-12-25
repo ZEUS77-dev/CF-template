@@ -6,12 +6,13 @@ typedef long long int ll;
 const ll INF = 1e9 + 7;
 const ll MOD = 998244353;
 // definition files//;
+#define int long long
 #define loop(i, a, b) for(ll i = (ll)a; i <(ll) b; ++i)
 #define fl(i,n) loop(i, 0, n)
 #define rfl(i,n) for(ll i=(ll)(n)-1;i>=0;i--)
-#define py cout<<"YES\n";
-#define pm cout<<"-1\n";
-#define pn cout<<"NO\n";
+#define pry cout<<"YES\n";
+#define prm cout<<"-1\n";
+#define prn cout<<"NO\n";
 #define pb(x) push_back(x)
 #define nl '\n'
 #define inpt(v) fl(i,sz(v)) cin >> v[i];
@@ -21,7 +22,6 @@ const ll MOD = 998244353;
 #define ss second
 #define each(a, x) for (auto &a : x)
 #define all(x) (x).begin(), (x).end()
-#define debug(x) cout << #x << " "<< x << endl;
 #define Vmax(x) *max_element(all(x))
 #define Vmin(x) *min_element(all(x))
 #define fix(prec) cout << setprecision(prec) << fixed;
@@ -29,8 +29,12 @@ const ll MOD = 998244353;
 #define upB(v,x)  upper_bound(all(v),x)-v.begin() // > x
 #define charToInt(c) (c - '0')
  
+//Debug 
+void dbg_out() { cerr << endl; }
+template<typename Head, typename... Tail>
+void dbg_out(Head H, Tail... T) { cerr << ' ' << H; dbg_out(T...); }
+#define dbg(...) cerr << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
 void _print(ll t) {cerr << t;}
-void _print(int t) {cerr << t;}
 void _print(string t) {cerr << t;}
 void _print(char t) {cerr << t;}
 void _print(double t) {cerr << t;}
@@ -47,16 +51,30 @@ template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_pr
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
  
 //main// 
-ll n,k,a,b,c,q,x,y,l,r,ans,mx,mn,sum;
-int main()
+//IMPORTANT PROPERTIES//
+//Binary exponentiaition//
+/*long long binpow(long long a, long long b) { 
+if (b == 0)
+return 1;
+long long res = binpow(a, b / 2);
+if (b % 2)
+return res * res * a;
+else
+return res * res;
+}*/
+//-->even no. of 1s in xor cancel each other
+void solve(){
+    
+}
+signed main()
 {
  ios_base::sync_with_stdio(false);cin.tie(NULL);
  int t = 1;
  cin >> t;
  while (t--)
   {
-     //start her//
-    
+     //start her UwU//
+     solve();
   }
   return 0;
 }
